@@ -1,5 +1,4 @@
 #Standard 4th order runge-kutta for a pendulum
-#By: Major Mosley
 from math import sin, pi
 from numpy import array, arange
 import matplotlib.pyplot as plt
