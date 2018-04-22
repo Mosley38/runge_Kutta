@@ -1,16 +1,13 @@
+#Standard 4th order runge-kutta for a pendulum
+#By: Major Mosley
 from math import sin, pi
 from numpy import array, arange
 import matplotlib.pyplot as plt
-#from pylab import plot, xlabel, show
-#import pdb
-
-#pdb.set_trace()
-
 
 
 g = 9.81
 l = .1
-thetaO = 179.0*pi/180
+thetaO = 179.0*pi/180 #Convert the angle
 
 def f(r,t):
     theta = r[0]
@@ -45,21 +42,4 @@ plt.plot(tp, thetapt)
 plt.xlabel('Time')
 plt.show()
 
-#print(xpt)
-#print(ypt)
 
-'''
-if n <= 100:
-     xpt.append(r[0])
-     ypt.append(r[1])
-     k1 = h * f(r,t)
-     k2 = h * f(r + 0.5*k1, t + 0.5*h)
-     k3 = h * f(r + 0.5*k2, t + 0.5*h)
-     k4 = h * f(r + k3, t + h)
-     r += (k1 + 2 * k2 + 2 * k3 + k4)/6
-
-plot(tp , xpt)
-plot(tp , ypt)
-xlabel('Time')
-show()
-'''
