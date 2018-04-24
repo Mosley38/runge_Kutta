@@ -22,14 +22,14 @@ h = (b-a) / N
 
 tp = arange(a, b, h)
 thetapt = []
-ypt = []
+omegapt = []
 
 #Here i Set the initial angle and time Now we start our for loop to
 r = array([thetaO, 0.0], float)
 for t in tp:
     #Break down into two componets of vector r
     thetapt.append(r[0])
-    ypt.append(r[1])
+    omegapt.append(r[1])
     #The next part is the standard equations for our 4th order runge-kutta method
     k1 = h * f(r,t)
     k2 = h * f(r + 0.5*k1, t + 0.5*h)
@@ -39,7 +39,7 @@ for t in tp:
 
 
 plt.plot(tp, thetapt)
-plt.plot(tp, ypt)
+plt.plot(tp, omegapt)
 plt.xlabel('Time')
 plt.show()
 
